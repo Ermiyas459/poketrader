@@ -19,7 +19,7 @@
         </div>
         <div class="register-group">
             <h5>Enter ur Birthdate</h5>
-            <input type="date" name="birthdate" id="birthdate" required>
+            <input type="date" name="birthdatee" id="birthdatee" required>
         </div>
         <div class="register-group">
             <input type="password" placeholder="Create password" name="Password" id="Password" required>
