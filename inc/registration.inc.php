@@ -18,11 +18,16 @@
             <input type="email" placeholder="Enter ur email" name="email" id="email" required>
         </div>
         <div class="register-group">
+            <h5>Enter ur Birthdate</h5>
+            <input type="date" name="birthdate" id="birthdate" required>
+        </div>
+        <div class="register-group">
             <input type="password" placeholder="Create password" name="Password" id="Password" required>
         </div>
         <div class="register-group">
             <input type="text" placeholder="Confirm password" name="Cpassword" id="Cpassword" required>
         </div>
+
         <div class="policy">
             <h6>I accept all terms & condition <input type="checkbox" required>
         </div>
