@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.registrationformm {
+    animation: fadeIn 0.6s ease-out;
+    font-family: 'Press Start 2P', cursive;
+    padding: 35px 570px;
+    text-align: center;
+}
+
+.login {
+    font-family: 'Press Start 2P', cursive;
+    animation: fadeIn 0.6s ease-out;
+    padding: 35px 570px;
+    text-align: center;
+}
+.login-group {
+    margin-bottom: 55px;
+    font-weight: bold;
+}
+.login-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid darkblue;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.logologin{
+    image-rendering: pixelated;
+    animation: fadeIn 0.6s ease-out;
+    height: 150px;
+    margin: 15px;
+}
+
+.policy input[type="checkbox"]:checked {
+    background: #ffcb05;
+    border-color: darkblue;
+}
+
+.policy input[type="checkbox"]:hover {
+    transform: scale(1.1);
+}
+
+.policy input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    border: 3px solid black;
+    border-radius: 50%;
+    background: radial-gradient(circle at center,
+    white 48%, black 49%, black 51%, red 52%);
+    cursor: pointer;
+}
+
+.logoregister
+{
+    animation: fadeIn 0.6s ease-out;
+    display: block;
+      margin: 40px auto;
+      width: 320px;
+    image-rendering: pixelated;
+
+}
+/* Alleen achtergrond op de registratiepagina */
+body.registration-page {
+    background: url("../images/vulpix.jpg") no-repeat center center fixed;
+    background-size: cover; /* vult altijd het scherm */
+}
+
+.register-group {
+    margin-bottom: 45px;
+    font-weight: bold;
+}
+.register-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid darkblue;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.register-group-button input[type="submit"] {
+    display: inline-block;
+    background: #ffcb05; /* Pokémon geel */
+    border: 4px solid #2a75bb;
+    padding: 15px 28px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #2a75bb;
+    cursor: pointer;
+}
+
+.register-group-button input[type="submit"]:hover {
+    background: #2a75bb; /* pokemon blueee */
+    color: #fff; /* text */
+    border-color: black;
+    transform: scale(1.05);
+
+}
+.hero {
+    position: relative;
+}
+/* Background video */
+.hero video {
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover entire hero area */
+    z-index: -1;       /* Push video behind content */
+}
+
+.topnav {
+    display: flex;
+    justify-content: flex-end; /* items rechts */
+    align-items: center;
+    background-color: #3B4CCA; /* Pokémon blauw */
+    padding: 12px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 6px rgba(0,0,0,0.2);
+}
+
+
+
+/* Logo links */
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Links in navbar */
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 17px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Hover effect (Pokémon geel) */
+.topnav a:hover {
+    background-color: #FFDE00;
+    color: #000; /* zwart tekst voor contrast */
+    border-radius: 6px;
+}
+
+/* Actieve pagina (Pokémon rood) */
+.topnav a.active {
+    color: white;
+    border-radius: 6px;
+}
+
+/* Login knop (rechts) */
+.topnav a.split {
+    margin-left: 15px;
+    background: none;
+    padding: 5px 10px;
+}
+
+.topnav a.split img {
+    height: 28px;
+    width: auto;
+    vertical-align: middle;
+    filter: brightness(0) invert(1); /* wit maken */
+    transition: 0.3s;
+}
+
+.topnav a.split img:hover {
+    filter: none; /* originele kleur bij hover */
+}
