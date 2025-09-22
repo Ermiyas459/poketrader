@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #222;
+
+    /* Pokemon achtergrond: blauw/geel met pokéball  */
+    background: radial-gradient(circle at top left, rgba(255, 0, 0, 0.2), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 0, 0.2), transparent 40%),
+    linear-gradient(135deg, #6EC6FF, #FFD54F);
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Subtiel Pokéball patroon met CSS (repeat) */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(circle at center, rgba(255,255,255,0.3) 25%, transparent 26%),
+    radial-gradient(circle at center, rgba(0,0,0,0.1) 25%, transparent 26%);
+    background-size: 80px 80px;
+    background-position: 0 0, 40px 40px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+.bc-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #FF1C1C;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25), 0 0 15px rgba(255,0,0,0.4);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Titel */
+.bc-container h1 {
+    font-size: 2rem;
+    color: #FF1C1C;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px #FFD54F;
+}
+
+/* Logo */
+.token-logo img {
+    width: 90px;
+    margin: 0 auto 25px;
+    display: block;
+    filter: drop-shadow(0 0 5px #FFD54F);
+    animation: bounce 2s infinite;
+}
+
+/* Tekst en inputs */
+.input-amount p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.input-amount input[type="number"] {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: #FFF;
+    color: #222;
+    border: 2px solid #FF1C1C;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.input-amount input[type="number"]:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #FFD54F;
+}
+
+/* Koop-knop */
+.btn-buy-pokedollars {
+    width: 85%;
+    padding: 12px;
+    background: linear-gradient(45deg, #FF1C1C, #FFD54F);
+    color: #FFF;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-buy-pokedollars:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #FFD54F, 0 0 10px #FF1C1C;
+}
+
+/* Animaties */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+
+
+/* Admindashboard pagina*/
+
+/* ---------- DASHBOARD CONTAINER ---------- */
+.admin-dashboard {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #333;
+}
+
+.admin-dashboard h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+}
+
+/* ---------- STATS CARDS ---------- */
+.stats-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #007bff;
+}
+
+/* ---------- CONTROLS (SEARCH + FILTER) ---------- */
+.user-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.user-controls input,
+.user-controls select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+.user-controls .btn.add {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.user-controls .btn.add:hover {
+    background: #218838;
+}
+
+/* ---------- USER TABLE ---------- */
+.user-table {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user-row {
+    display: grid;
+    grid-template-columns: 1fr 100px 160px;
+    align-items: center;
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-row:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ---------- USER INFO ---------- */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-pic img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+}
+
+.user-name {
+    font-weight: 600;
+    font-si
