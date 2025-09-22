@@ -1,3 +1,11 @@
+
+
+
+<body class="homepage">
+
+
+
+
 <div class="slideshow-container">
 
     <div class="mySlides fade">
@@ -13,6 +21,7 @@
     </div>
 
     <div class="mySlides fade">
+
         <div class="numbertext">3 / 3</div>
         <img src="img/1.jpg" style="width:100%">
         <div class="text">pokedollars</div>
@@ -48,20 +57,42 @@
     <h3>Voorbeeldkaarten</h3>
     <div class="cards-grid">
         <div class="card">
+            <a href="index?page=login">
             <img src="img/16.avif" alt="PokéCard 1">
-            <p><strong>Pikachu</strong><br>⚡ Elektriciteit • 50 HP</p>
+            <p><strong>gyarados</strong><br> water • 50 HP</p>
         </div>
         <div class="card">
+            <a href="index?page=login">
             <img src="img/diancie.avif" alt="PokéCard 2">
-            <p><strong>Charizard</strong><br>🔥 Vuur • 120 HP</p>
+            <p><strong>diancie</strong><br> wind • 120 HP</p>
         </div>
         <div class="card">
+            <a href="index?page=login">
             <img src="img/regirock.avif" alt="PokéCard 3">
-            <p><strong>Bulbasaur</strong><br>🌱 Gras • 40 HP</p>
+            <p><strong>regirock</strong><br> aarde • 40 HP</p>
+
         </div>
+        <div class="card">
+            <a href="index?page=login">
+                <img src="img/16.avif" alt="PokéCard 1">
+                <p><strong>gyarados</strong><br> water • 50 HP</p>
+        </div>
+        <div class="card">
+            <a href="index?page=login">
+                <img src="img/diancie.avif" alt="PokéCard 2">
+                <p><strong>diancie</strong><br> wind • 120 HP</p>
+        </div>
+        <div class="card">
+            <a href="index?page=login">
+                <img src="img/regirock.avif" alt="PokéCard 3">
+                <p><strong>regirock</strong><br> aarde • 40 HP</p>
+
+        </div>
+
     </div>
 </div>
 
+</body>
 
 
 
