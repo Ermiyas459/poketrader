@@ -4,7 +4,7 @@ include '../../PRIVATE/connectionpoke.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
-$role = 'Klant';
+$role = $_POST['role'];
 
 
 $sql = 'SELECT * FROM users WHERE email = :email AND `password` = :password';
@@ -14,10 +14,12 @@ $statement->BindParam('password' , $password);
 $statement->execute();
 
 $result = $statement->fetch(PDO::FETCH_ASSOC);
+$_SESSION['id'] = $result['id'];
+$_SESSION['role'] = $role;
 
 if ($result['role'] == 'Klant') {
     $_SESSION['role'] = 'Klant';
-    header('Location: ../index.php?page=homepage');}
+    header('Location: ../index.php?page=customerdashboard');}
 else if ($result['role'] == 'Admin') {
     $_SESSION['role'] = 'Admin';
     header('Location: ../index.php?page=admindashboard');}

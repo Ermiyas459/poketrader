@@ -7,20 +7,17 @@
 <div class="login">
     <form action="./php/login.php" method="post">
         <div class="login-group">
-            <?php
-            if(isset($_SESSION["meldinglogin"]))
-            {
-                echo $_SESSION["meldinglogin"];
-                unset($_SESSION["meldinglogin"]);
-            }
-            ?>
-        </div>
-        <div>
             <a href="index.php?page=homepage">
                 <img src="images/pokelogo.png" alt="Logo" class="logologin">
             </a>
         </div>
-
+        <?php
+        if(isset($_SESSION["meldinglogin"]))
+        {
+            echo $_SESSION["meldinglogin"];
+            unset($_SESSION["meldinglogin"]);
+        }
+        ?>
         <h4>Login</h4>
         <div class="login-group">
             <input type="email" placeholder="✉ Email Adress" name="email" id="email" required>

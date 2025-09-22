@@ -1,16 +1,100 @@
 <title>Homepage | Poketrader</title>
 
+<body class="home-page">
 
-<p> -</p>
-<p> -</p>
-<p> -</p>
-<p>(this is just a for a now to be a homepage)</p>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/fan.jpg" style="width:100%">
+        <div class="text">pokeCards</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/page3.jpg" style="width:100%">
+        <div class="text">traders</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/1.jpg" style="width:100%">
+        <div class="text">pokedollars</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- Intro + Cards -->
+<div class="home-intro">
+    <h2>Welkom bij PokéCards</h2>
+    <p>
+        Verzamel, ruil en speel met unieke PokéCards!
+        Bij ons vind je alles wat je nodig hebt om je collectie uit te breiden en
+        te ruilen met andere trainers.
+    </p>
+    <p>
+        Met <strong>PokéDollars</strong> kun je kaarten kopen, verkopen of speciale boosters verkrijgen.
+        Word vandaag nog een echte PokéMaster en bouw je ultieme deck!
+    </p>
+</div>
+
+<div class="example-cards">
+    <h3>Voorbeeldkaarten</h3>
+    <div class="cards-grid">
+        <div class="card">
+            <img src="img/16.avif" alt="PokéCard 1">
+            <p><strong>Pikachu</strong><br>⚡ Elektriciteit • 50 HP</p>
+        </div>
+        <div class="card">
+            <img src="img/diancie.avif" alt="PokéCard 2">
+            <p><strong>Charizard</strong><br>🔥 Vuur • 120 HP</p>
+        </div>
+        <div class="card">
+            <img src="img/regirock.avif" alt="PokéCard 3">
+            <p><strong>Bulbasaur</strong><br>🌱 Gras • 40 HP</p>
+        </div>
+    </div>
+</div>
 
 
-<p>
-    On 27 February 2024, Legends Z-A was announced during a Pokémon Presents presentation with a release window of '2025'.[16][17] At the end of the trailer, the Mega Evolution mechanic, which was first introduced in X and Y, was also confirmed to return.[18] Pokémon Legends: Z-A is being developed by Game Freak.[9] During the next Pokémon Presents, on 27 February 2025, a second video was released, giving more information on the plot and gameplay elements with an updated release window of 'late 2025'.[19][20] During the Nintendo Direct on 2 April 2025, it was confirmed that Pokémon Legends: Z-A will get an upgraded version on Nintendo Switch 2 alongside many other Nintendo Switch games.[21] It is scheduled for release on 16 October 2025 for both Switch and Switch 2.[22]
 
-</p>
-<a href="index.php?page=login">
-    <img src="images/pokemon_logo.png" alt="Logo">
-</a>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</body>

@@ -8,28 +8,35 @@
             <img src="images/pokelogo.png" alt="Logo" class="logoregister">
         </a>
     </div>
-
+    <?php
+    if(isset($_SESSION["meldingpsw"]))
+    {
+        echo $_SESSION["meldingpsw"];
+        unset($_SESSION["meldingpsw"]);
+    }
+    ?>
     <h4> Registration</h4>
-    <form action="#">
+    <form action="./php/register.php" method="post">
         <div class="register-group">
-            <input type="text" placeholder="Enter ur name" name="password" id="Name" required>
+            <input type="text" placeholder="Enter ur name" name="name" id="name" required>
         </div>
         <div class="register-group">
             <input type="email" placeholder="Enter ur email" name="email" id="email" required>
         </div>
         <div class="register-group">
-            <h5>Enter ur Birthdate</h5>
-            <input type="date" name="birthdatee" id="birthdatee" required>
+<!--            <h5>Enter ur Birthdate</h5>-->
+            <input type="date" name="birthdate" id="birthdate" required>
         </div>
         <div class="register-group">
-            <input type="password" placeholder="Create password" name="Password" id="Password" required>
+            <input type="password" placeholder="Create password" name="password" id="password" required>
         </div>
         <div class="register-group">
-            <input type="text" placeholder="Confirm password" name="Cpassword" id="Cpassword" required>
+            <input type="password" placeholder="Confirm password" name="confirmpassword" id="confirmpassword" required>
         </div>
 
+
         <div class="policy">
-            <h6>I accept all terms & condition <input type="checkbox" required>
+            <h6>I accept all  <a href="index.php?page=terms">terms & conditions</a> <input type="checkbox" required>
         </div>
         <div class="register-group-button">
             <input type="submit" value="REGISTER NOW">
