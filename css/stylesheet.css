@@ -1,0 +1,79 @@
+/*body {*/
+/*    margin: 0;*/
+/*    font-family: Arial, Helvetica, sans-serif;*/
+/*    background-color: #f5f5f5;*/
+/*}*/
+
+/* Navbar container */
+.topnav {
+    display: flex;
+    justify-content: flex-end; /* items rechts */
+    align-items: center;
+    background-color: #3B4CCA; /* Pokémon blauw */
+    padding: 12px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 6px rgba(0,0,0,0.2);
+}
+
+
+
+/* Logo links */
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Links in navbar */
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 17px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Hover effect (Pokémon geel) */
+.topnav a:hover {
+    background-color: #FFDE00;
+    color: #000; /* zwart tekst voor contrast */
+    border-radius: 6px;
+}
+
+/* Actieve pagina (Pokémon rood) */
+.topnav a.active {
+    color: white;
+    border-radius: 6px;
+}
+
+
+
+
+/* Login knop (rechts) */
+.topnav a.split {
+    margin-left: 15px;
+    background: none;
+    padding: 5px 10px;
+}
+
+.topnav a.split img {
+    height: 28px;
+    width: auto;
+    vertical-align: middle;
+    filter: brightness(0) invert(1); /* wit maken */
+    transition: 0.3s;
+}
+
+.topnav a.split img:hover {
+    filter: none; /* originele kleur bij hover */
+}

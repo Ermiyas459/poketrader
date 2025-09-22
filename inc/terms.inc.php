@@ -1,82 +1,39 @@
-<title>Terms of Use | Poketrader</title>
+What are general terms and conditions?
+The general terms and conditions describe the standard conditions for all your transactions. General terms and conditions are part of the (purchase) agreement. In them you can describe for instance:
 
-<h1>Terms of Use</h1>
-<p><strong>Last Update:</strong> June 15, 2023</p>
-<p><strong>PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE USING THIS SERVICE.</strong></p>
+payment conditions
+delivery times
+conditions for repairs
+guarantees
+how you deal with disputes
+General terms and conditions are not about specifics of your product or service, such as price or colour. Learn more on how to draft general terms and conditions.
 
-<h2>1. What Services Do These Terms Cover?</h2>
-<p>These terms of use ("Terms") cover the following products and services ("Service") however accessed and/or used, which are operated by or otherwise made available by the Pokémon Company International, Inc. or its affiliates ("Pokémon" or "we", "us", or "our"):</p>
-<ul>
-    <li><a href="http://www.pokemon.com">www.pokemon.com</a> </li>
-    <li>The Pokémon Trainer Club account system</li>
-    <li>All apps published by Pokémon ("Apps"), unless otherwise indicated</li>
-    <li>Pokémon Trading Card Game Live ("PTCGL")</li>
-    <li>All email newsletters published or distributed by Pokémon</li>
-    <li>All other interactive features, services, and communications provided by Pokémon</li>
-</ul>
+Are general terms and conditions mandatory?
+You do not have to draw up general terms and conditions. Legal requirements always apply to purchase agreements for you and your customer. Some sector organisations do enforce the use of general terms and conditions, for instance in childcare.
 
-<h2>2. Agreement Between You and The Pokémon Company International, Inc.</h2>
-<p>By accessing, downloading, or using the Service, you acknowledge that you have read, understood and agreed to these Terms and any code of conduct that we may put forth from time to time. Where you are permitting a minor to use the Service, you are also agreeing that the minor will adhere to the Terms.</p>
-<p>Pokémon's <a href="http://www.pokemon.com/us/privacy-notice/">Privacy Notice</a> explains Pokémon's collection, use, transmission and disclosure of your personal information.</p>
+In the Netherlands, several sector organisations, often together with consumer organisations, have jointly drawn up general terms and conditions. Please contact your sector organisation (MKB-Nederland, in Dutch) to find out if they have general terms and conditions for you to use.
 
-<h2>3. Intellectual Property, Service Content, and User Submissions</h2>
-<p>Unless otherwise noted, all content on the Service, including articles, artwork, screenshots, graphics, logos, downloads and other files, is the property of Pokémon...</p>
+If you do use general conditions, they apply to both you and your customer. You can file your general terms and conditions with the Dutch Chamber of Commerce (KVK), or with the court (in Dutch). Note that this is also not mandatory.
 
-<h2>4. Copyright Infringment Claims</h2>
-<p>If you believe a portion of the Service infringes your copyright and you wish to file a copyright infringement notification with us, please visit <a href="https://www.pokemon.com/us/legal/copyright/"> Copyright</a> for directions on submitting a copyright infringement notice to us.</p>
+Unreasonable conditions
+You are not allowed to have unreasonable conditions. Unreasonable is, for instance, if you deny your customer certain legal rights. The law states:
 
-<h2>5. User Rights & Restrictions</h2>
-<p>These Terms grant permission to you, in your individual capacity, to use the content of Service made available to you for personal, noncommercial home use only. In no instance may you:</p>
-<ul>
-    <li>Change or remove any copyright and other proprietary notices from content on the Service</li>
-    <li>Modify, or create derivative works based on, the content</li>
-    <li>Use, or facilitate the use of, any unauthorized third-party software (e.g. bots, mods, hacks, and scripts) to modify or automate operation within the Service whether for yourself or for a third party</li>
-    <li>Use the content in any manner: (a) suggesting an association with any other products, services, or brands (b) that is likely to cause confusion among customers, (c) that disparages or discredits Pokémon, (d) that is otherwise exploitative for any commercial purpose; or (e) that otherwise infringes our intellectual property rights</li>
-    <li>Download quantities of content to a database for any reason</li>
-    <li>Decompose, disassemble, or reverse engineer any part of any Service, or otherwise use a Service for any purpose other than those provided for by us and in conjunction with the operations of the Service</li>
-    <li>Develop functionally similar products or services to any Service</li>
-    <li>Use any Service for the benefit of any third party or transfer access to the Services to any third party</li>
-    <li>Use the Service or content for commercial purposes, including, but not limited to: (a) selling access to all or part of the Service or (b) placing advertising, sponsorships, or promotions on or within the Service or content</li>
-    <li>Avoid, circumvent, or disable any security or digital rights management protocols or mechanism in any Service</li>
-    <li>Infiltrate any system used to operate the Service</li>
-    <li>Take any action to cause, or exploit, known or latent malfunctions, bugs or other defects in the Service or system used to operate the Service</li>
-    <li>Attempt to circumvent any restriction in any Service based upon age, geography, or other restriction imposed by us</li>
-</ul>
+which conditions are unreasonable (in Dutch), for example that your customer can only undo their purchase through the court
+which conditions may be unreasonable (in Dutch), for instance that you cannot be held liable for damage
+Inform your customer (duty of disclosure)
+Before you conclude an agreement, you must inform your customer about the general terms and conditions you use. Use clear language to draw up your general terms and conditions, and make sure your customer knows what they are. You can do so, for example, by having them confirm they have read the terms and conditions.
 
-<h2>6. Conduct & Community Standards</h2>
-<p>You are prohibited from posting or transmitting any material to the Service that could: (i) interfere with anyone else's use of the Service; (ii) be considered abusive, illegal, indecent, obscene, offensive, or threatening in any way; (iii) encourage anyone to break the law; (iv) violate anyone's copyright or other property right; (v) interfere with the privacy of any other user; (vi) contain a virus or any other harmful component; or (vii) contain false or misleading statements of fact or descriptions of the origin of the material or the communication.
+Modifying general terms and conditions
+You are allowed to change your general terms and conditions while you are doing business with a customer, but not on a whim. You must inform your customer about these changes in plain language.
 
-    Although we may from time to time monitor or review bulletin boards, chatrooms, discussions, postings, transmissions, and the like on the Service, we are under no obligation to do so, and assume no liability or responsibility arising from the contents of any such communications. We may change, edit, or remove any user material or conversations that we deem illegal, indecent, obscene, offensive, or otherwise violating our policies in any way. We will fully cooperate with any law enforcement authorities or court order requesting or directing us to disclose the identity of anyone posting such materials.</p>
+Do supply continuing services or products, such as subscriptions? You are not allowed to just change your terms and conditions, you must comply with these rules:
 
-<h2>7. Contest, Sweepstakes</h2>
-<p>This Service may refer to contests, sweepstakes or similar events (including without limitation Play! Pokémon Program championship events) that offer prizes or require you to send in material or information about yourself. Each contest, sweepstakes or other such event has its own rules, which you must read and agree to before you may enter.</p>
+On purchase it must be clear that you may change the conditions at any time.
+You must inform your customer by sending them the changes in your general terms and conditions. A short note is not enough.
+The changes must be reasonable. You customer should for instance be able to terminate the agreement (for example their subscription). And you are not allowed to change the price of a subscription within 3 months.
+Annulling general terms and conditions
+Your customer has the right to annul the general terms and conditions if one of the following is the case:
 
-<h2>8. Play! Pokemon Program</h2>
-<p>Because of the popularity of the Pokémon products, a large number of real-world Pokémon trading-card and videogame tournaments ("Play! Pokémon Events") may be occurring worldwide on any given day. While we do organize certain special events and championship events, most Play! Pokémon Events are organized or operated by independent third-party organizers, such as retailers of trading card games. While most Play! Pokémon Events are not run by us, we do post to the Service certain information we receive about Play! Pokémon Events from independent Play! Pokémon Event organizers. Such information includes event schedules and locations, and the names and rankings of PTC Account-holders who have selected the option in their Play! Pokémon settings to have this information posted to the Service. Information received from these independent. Play! Pokémon Event organizers allows us to create and post player rankings based on tournament results. Pokémon will use reasonable efforts to include accurate and up-to-date information on the Service, but Pokémon makes no representations or warranties of any kind about its accuracy, currency or completeness of information on the Service, including without limitation, tournament results and player ranking.</p>
-
-<h2>9. Third Party Products & Services</h2>
-<p>The Service may contain links to third party websites, services and platforms that are not owned or controlled by us. We are not responsible for content on a site operated by a third party, including content on a site operated by a distributor who links to the Service with Pokémon's consent. Furthermore, we are not responsible for maintaining any materials referenced from another site, and makes no warranties for that site or this Service in such context. Additionally, certain features in the Service may require you to register certain information, including game ID number, 3rd party account information (like iTunes or Google Play account information), and/or use Nintendo™ hardware/software or Nintendo Network to participate in certain features of the Service. We are not responsible for any failure of such hardware, software, or services, including any damage to game data or game points, etc. For more information regarding Nintendo hardware and software, please visit Nintendo's website at <a href="https://www.nintendo.com">Nintendo</a> </p>
-
-<h2>10. Virtual Content</h2>
-<p>We may, at various times, permit you to use "real world" money to buy Virtual Content. "Virtual Content" is a generic term for the products and services available to users free of charge, via code card redemption, or for purchase within the Service which may be used within the Service to access certain features, functions, and other Virtual Content. Virtual Content includes but is not limited to, virtual items like digital trading cards; deck sleeves; and coins; as well as in-Service Virtual Currency like Crystals and Credits ("Virtual Currency"). Certain features in the Services may be unavailable if not purchased.</p>
-<p>We may, from time to time, and at our sole discretion, provide opportunities for users to acquire certain Virtual Content free of charge, at reduced rates, or as bonus content when you acquire other Virtual Content or real world content such as certain physical Pokémon Trading Card products. You may only acquire Virtual Content in the amount and at times permitted by us in our sole discretion and may only purchase Virtual Content for your personal use within the Service. The inclusion of any Virtual Content at a particular time does not imply or warrant that the same Virtual Content will be available at any or all times. All features, content, capabilities, and specifications of Virtual Content described or depicted in the Service are subject to change at any time without notice.</p>
-<p>Virtual Content does not have monetary value, and may not be redeemed for legal currency, services, or items of value outside of the Services. Virtual Content obtained via the Service is provided to you under a limited, personal, revocable, non-transferable, non-sublicenseable license to use within the Service. You have no property interest; right or title in or to any Virtual Content appearing or originating in the service, and Virtual Content may not be transferred or resold in any manner not explicitly permitted by us. We may terminate your license to Virtual Content at any time and at our sole discretion.</p>
-
-<h2>11. Purchasing Virtual Content</h2>
-<p>For all charges for any Virtual Content sold on the Service, we, or payment processor acting on our behalf, will bill your credit card or alternative payment method. All prices for Virtual Content are displayed excluding taxes. You agree to pay all fees and applicable taxes incurred by you or anyone using an account registered to you. In the event that your credit card or alternative payment provider refuses to pay us for an amount credited to your account, we will have the right to delete the Virtual Content or the products or services purchased with such Virtual Content from your account. You agree that you will not cancel or reverse any charges for such Virtual Content or otherwise attempt to defraud us. In the event legal action is necessary to collect on balances due, you agree to reimburse us for all expenses incurred to recover sums due, including attorneys' fees and other legal expenses.</p>
-<p>ALL PURCHASES OF VIRTUAL CONTENT ARE NON-RETURNABLE AND NON-REFUNDABLE. If you redeem Virtual Currency to purchase in-game virtual items, you lose any statutory right of withdrawal because we begin performing our services upon your redemption of Virtual Currency for Virtual Content. If through some problem with your account or any other reason you lose Virtual Content and we can verify that you had it, we will make commercially reasonable efforts to replace them.</p>
-<p>YOU WILL NOT RECEIVE MONEY OR OTHER COMPENSATION FOR UNUSED VIRTUAL CONTENT WHEN AN ACCOUNT IS CLOSED, WHETHER SUCH CLOSURE WAS VOLUNTARY OR INVOLUNTARY. Certain jurisdictions may provide additional statutory rights, including a Cooling-Off Period which allows you to withdraw from a purchase. Nothing herein is meant to limit your return or cancellation rights for your purchase of Virtual Content under local law.</p>
-
-<h2>12. Updates & Changes to Service</h2>
-<p>We may, from time to time, issue patches or updates for portions of the Service which must be installed to continue using those portions of the Service. You consent to receive and install those patches and updates in order to continue using the Service. You also accept that all or portions of the Service may experience server issues that make it temporarily unavailable, and that we may in our sole discretion and without notice terminate all or any part of the Service. You accept that you will have no recourse of any kind against us even if this causes you to lose a match, to lose Virtual Content, or to have no further access to all or part of the Service.</p>
-
-<h2>13. Disclaimer</h2>
-<p>THE SERVICE AND ALL CONTENT THEREIN ARE PROVIDED ON AN "AS IS" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF TITLE OR IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. BY USING THE SERVICE, YOUR ACKNOWLEDGE THAT YOUR USE OF THE SERVICE IS AT YOUR SOLE RISK, THAT YOU ASSUME FULL RESPONSIBILITY FOR ALL COSTS ASSOCIATED WITH ALL SERVICING OR REPAIRS OF ANY EQUIPMENT YOU USE IN CONNECTION WITH YOUR USE OF OUR SERVICE, AND THAT NEITHER POKÉMON NOR ANY OF ITS AFFILIATES OR THEIR RESPECTIVE AGENTS, DIRECTORS, EMPLOYEES, INFORMATION PROVIDERS, LICENSORS, LICENSEES, OFFICERS AND/OR AFFILIATES WILL BE LIABLE FOR ANY DAMAGES OF ANY KIND RELATED TO YOUR USE OF THIS SERVICE.</p>
-<p>UNDER NO CIRCUMSTANCES, INCLUDING BUT NOT LIMITED TO POKÉMON'S NEGLIGENCE, WILL POKÉMON OR ANY OF ITS AFFILIATES OR THEIR RESPECTIVE AGENTS, DIRECTORS, EMPLOYEES, INFORMATION PROVIDERS, LICENSORS, LICENSEES, OFFICERS AND/OR AFFILIATES BE LIABLE FOR ANY CONSEQUENTIAL, DIRECT, INCIDENTAL, INDIRECT, PUNITIVE, OR SPECIAL DAMAGES RELATED TO (A) THE USE OF, (B) THE INABILITY TO USE, OR (C) ERRORS OR OMISSIONS IN THE CONTENTS AND FUNCTIONS OF THIS SERVICE, EVEN IF POKÉMON OR AN AUTHORIZED REPRESENTATIVE THEREOF HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CONSEQUENTIAL OR INCIDENTAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU. IN NO EVENT WILL THE TOTAL LIABILITY OF POKÉMON AND ITS AFFILIATES AND THEIR RESPECTIVE AGENTS, DIRECTORS, EMPLOYEES, INFORMATION PROVIDERS, LICENSORS, LICENSEES, OFFICERS AND/OR AFFILIATES TO YOU FOR ALL DAMAGES, LOSSES, AND CAUSES OF ACTION (WHETHER IN CONTRACT OR TORT) EXCEED $100.00.</p>
-<p>YOU UNDERSTAND THAT THE WARRANTY DISCLAIMERS AND LIABILITY AND REMEDY LIMITATIONS LISTED ABOVE ARE A CONDITION OF US MAKING THE SERVICE AVAILABLE TO YOU. WITHOUT THEM, WE WOULD NOT AND COULD NOT MAKE THE SERVICES AVAILABLE. You accept that if we discover that you have violated any portion of these Terms, we may take any step we deem appropriate including but not limited to terminating your PTC Account and access to the Services. You acknowledge that if that happens, you will not receive any reimbursement or other compensation for any items that may be associated with your account at the time of termination.</p>
-
-<h2>14. Indemnification</h2>
-<p>You agree to indemnify, defend, and hold Pokémon and its affiliates and their respective agents, directors, employees, information providers, licensors, licensees, officers and/or affiliates (collectively, "Indemnified Parties"), harmless from and against any and all liability and costs (including, without limitation, attorneys' fees and costs), incurred by the Indemnified Parties in connection with any claim arising out of any breach by you of these Terms or the foregoing representations, warranties, and covenants. You will cooperate as fully as reasonably required in the defense of any claim. Pokémon reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you and you will not in any event settle any matter without the written consent of Pokémon.</p>
-
-<h2>15. General Provisions</h2>
-<p>These Terms, our Privacy Notices, and any additional terms posted on this Service together constitute the entire agreement between Pokémon and you with respect to your use of this Service. Any cause of action you may have related to your use of this Service must be commenced within 1 year after the claim or cause of action arises. If a court of competent jurisdiction finds any provision of these Terms, or portion thereof, to be unenforceable, that provision will be enforced to the maximum extent permissible so as to affect the intent of this agreement, and the remainder of these Terms will continue in full force and effect. These Terms are governed by and construed in accordance with the laws of the State of Washington, excluding its conflict of laws provisions, as applied to agreements executed by Washington residents and performed solely within the State of Washington, and you submit to personal jurisdiction in Washington. You irrevocably agree that the state and federal courts located in the State of Washington, U.S.A. will have exclusive jurisdiction over any dispute which may arise out of or in connection with these Terms in respect of any claim brought against us by you and will have non-exclusive jurisdiction over any claim brought against you by us. You agree to accept service of process by mail in the state in which your domicile is located as specified by you to us. THE PARTIES HEREBY WAIVE TRIAL BY JURY. You agree that this provision will survive termination or expiration of this Agreement.</p>
+you fail to observe the rules for general terms and conditions: for instance, your terms are unreasonable;
+you suddenly change your terms and fail to inform your customer clearly and in a timely fashion.
+Your customer can have the general terms and conditions annulled by sending a letter or an email. Annulment renders your general terms and conditions invalid.
