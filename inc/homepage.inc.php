@@ -1,7 +1,3 @@
-<title>Homepage | Poketrader</title>
-
-<body class="home-page">
-
 <div class="slideshow-container">
 
     <div class="mySlides fade">
@@ -68,6 +64,9 @@
 
 
 
+
+
+
 <script>
     let slideIndex = 1;
     showSlides(slideIndex);
@@ -96,5 +95,3 @@
         dots[slideIndex-1].className += " active";
     }
 </script>
-
-</body>
