@@ -1,4 +1,5 @@
 <title>Login | Poketrader</title>
+
 <div class="hero">
     <video autoplay muted loop playsinline>
         <source src="images/pokemon.mp4" type="video/mp4">
@@ -7,7 +8,7 @@
 <div class="login">
     <form action="./php/login.php" method="post">
         <div class="login-group">
-            <a href="index.php?page=homepage">
+            <a href="index.php?page=homepage2">
                 <img src="images/pokelogo.png" alt="Logo" class="logologin">
             </a>
         </div>

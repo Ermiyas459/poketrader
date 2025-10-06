@@ -1,5 +1,6 @@
 <title>Terms of Use | Poketrader</title>
 
+<body class="terms">
 <h1>Terms of Use</h1>
 <p><strong>Last Update:</strong> June 15, 2023</p>
 <p><strong>PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE USING THIS SERVICE.</strong></p>
@@ -80,3 +81,5 @@
 
 <h2>15. General Provisions</h2>
 <p>These Terms, our Privacy Notices, and any additional terms posted on this Service together constitute the entire agreement between Pokémon and you with respect to your use of this Service. Any cause of action you may have related to your use of this Service must be commenced within 1 year after the claim or cause of action arises. If a court of competent jurisdiction finds any provision of these Terms, or portion thereof, to be unenforceable, that provision will be enforced to the maximum extent permissible so as to affect the intent of this agreement, and the remainder of these Terms will continue in full force and effect. These Terms are governed by and construed in accordance with the laws of the State of Washington, excluding its conflict of laws provisions, as applied to agreements executed by Washington residents and performed solely within the State of Washington, and you submit to personal jurisdiction in Washington. You irrevocably agree that the state and federal courts located in the State of Washington, U.S.A. will have exclusive jurisdiction over any dispute which may arise out of or in connection with these Terms in respect of any claim brought against us by you and will have non-exclusive jurisdiction over any claim brought against you by us. You agree to accept service of process by mail in the state in which your domicile is located as specified by you to us. THE PARTIES HEREBY WAIVE TRIAL BY JURY. You agree that this provision will survive termination or expiration of this Agreement.</p>
+
+</body>

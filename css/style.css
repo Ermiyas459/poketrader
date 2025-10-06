@@ -8,6 +8,22 @@
     }
 }
 
+@keyframes bounce {
+    0%, 15% { transform: translateY(0); }
+    60% { transform: translateY(-3px); }
+}
+
+
+* {box-sizing: border-box}
+body.terms {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+.topnav{
+    font-family: Verdana, sans-serif; margin: 0;
+}
+
 .registrationformm {
     animation: fadeIn 0.6s ease-out;
     font-family: 'Press Start 2P', cursive;
@@ -66,8 +82,19 @@
       margin: 40px auto;
       width: 320px;
     image-rendering: pixelated;
-
 }
+
+body.home-page {
+    /* image + semi-transparent overlay stacked as backgrounds */
+    background-image:
+            linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255.255,0.8)),
+            url("../images/paper.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 
 body.registration-page {
     background: url("../images/vulpix.jpg") no-repeat center center fixed;
@@ -372,3 +399,200 @@ body.home-page::after {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
+/* Admindashboard pagina*/
+
+/* ---------- DASHBOARD CONTAINER ---------- */
+.admin-dashboard {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #333;
+}
+
+.admin-dashboard h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+}
+
+/* ---------- CONTROLS (SEARCH + FILTER) ---------- */
+.user-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.user-controls input,
+.user-controls select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+.user-controls .btn.add {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.user-controls .btn.add:hover {
+    background: #218838;
+}
+
+/* ---------- USER TABLE ---------- */
+.user-table {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user-row {
+    display: grid;
+    grid-template-columns: 1fr 100px 160px;
+    align-items: center;
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-row:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ---------- USER INFO ---------- */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-pic img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+}
+
+
+        /* ---------- STATS CARDS ---------- */
+    .stats-cards {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        flex: 1;
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .card span {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 5px;
+        color: #007bff;
+    }
+
+/* ----------  HOMEPAGE POKEMON API  ---------- */
+#pokemonBackground{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+#pokemonOverlay{
+    background: rgba(0,0,0,0.3);
+    color: #3C5AA6;
+    padding: 15px 25px;
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+.pokemon-card {
+    width: 300px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+    border: 6px solid #3C5AA6;
+    position: relative;
+}
+.pokemon-card .header {
+    background: #3C5AA6;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+.card-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 20px;
+}
+.pokemon-card {
+    flex: 0 0 250px;
+    scroll-snap-align: center;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 12px;
+    text-align: center;
+}
+
+.pokemon-card img {
+    width: 100%;
+    height: auto;
+}
+
+.type-badge {
+    display: inline-block;
+    margin: 2px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.currency-logo {
+    width: 90px;
+    margin: 0;
+    filter: drop-shadow(0 0 2px #FFD54F);
+    animation: bounce 2s infinite;
+}

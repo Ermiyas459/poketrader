@@ -4,7 +4,7 @@
 
 <div class="registrationformm">
     <div>
-        <a href="index.php?page=homepage">
+        <a href="index.php?page=homepage2">
             <img src="images/pokelogo.png" alt="Logo" class="logoregister">
         </a>
     </div>

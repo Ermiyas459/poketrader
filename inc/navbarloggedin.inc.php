@@ -1,19 +1,17 @@
-<link rel="stylesheet" href="css/stylesheet.css">
 
 
 <div class="topnav">
 
     <div class="logo">
-        <a href="index.php?page=costumerdashboard">
+        <a href="index.php?page=customerdashboard">
             <img src="images/pokemon_logo.png" alt="Logo">
         </a>
     </div>
 
-
-
-    <a class="active" href="index.php?page=costumerdashboard">dashboard</a>
-    <a class="active-inbox"  href="index.php?page=inbox">inbox</a>
-    <a href="php/logout.php" class="split">Logout
+    <a class="" href="index.php?page=customerdashboard">Dashboard</a>
+    <a class=""  href="index.php?page=inbox">Inbox</a>
+    <a href="php/logout.php" class="split">
+        <img src="images/Block_Person.png" alt="Login">
     </a>
 
 

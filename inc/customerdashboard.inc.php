@@ -1,6 +1,16 @@
+<title>Dashboard | Poketrader</title>
+
+
 <?php
+if (!isset($_SESSION['role']) || $_SESSION ['role'] == "Admin") {
+    unset($_SESSION["role"]);
+    header("Location: index.php?page=404");
+    exit;
+}
+
 include '../Private/connectionpoke.php';
-$id = $_SESSION['id'];
+
+$id = $_SESSION['userId'];
 
 // kaarten
 $sql = "SELECT * FROM `pokecards`";
@@ -8,11 +18,13 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $pokecards = $stmt->fetchAll();
 // pokedollars
-$sql = "SELECT SUM(pokedollars) AS Pokedollars 
+$id = $_SESSION['userId'] ?? 0; // fallback to 0 if not set
+
+$sql = "SELECT SUM(pokedollars) AS pokedollars 
         FROM wallet 
-        WHERE id = $id";
+        WHERE userId = :userId";
 $stmt = $pdo->prepare($sql);
-$stmt->execute();
+$stmt->execute(['userId' => $userId]);
 $wallet = $stmt->fetch();
 
 ?>
@@ -21,8 +33,8 @@ $wallet = $stmt->fetch();
     <div class="wallet-container">
         <div class="wallet-info">
             <p class="pokedollars">
-                <img src="img/pokedollar" class="currency-logo" alt="$">
-                <?= htmlspecialchars($wallet['Pokedollars'] ?? 0) ?>
+                <img src="images/pokedollar.png" class="currency-logo" alt="$">
+                <?= htmlspecialchars($wallet['pokedollars'] ?? 0) ?>
             </p>
         </div>
     </div>
@@ -47,17 +59,17 @@ $wallet = $stmt->fetch();
 
             <?php if (count($pokecards) > 6): ?>
                 <div class="load-more-wrapper">
-                    <button id="loadMoreBtn">Meer laden</button>
+                    <button id="loadMoreBtn">Load more</button>
                 </div>
 
             <?php endif; ?>
         <?php else: ?>
-            <p>Geen pokecards gevonden.</p>
+            <p>No pokecards found.</p>
         <?php endif; ?>
     </div>
 </section>
 
-<button class="bidsbtn" id="bidsbtn">bids</button>
+<button class="bidsbtn" id="bidsbtn">Bids</button>
 
 
 <script>
