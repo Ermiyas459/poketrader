@@ -13,7 +13,7 @@ for ($i = 1; $i <= 20; $i++) {
     $status = 'available';
     $userId = NULL;
 
-    // Controleer of Pokémon al bestaat
+
     $check = $conn->prepare("SELECT id FROM pokecards WHERE name = ?");
     $check->bind_param("s", $name);
     $check->execute();

@@ -20,6 +20,6 @@ if ($stmt->execute()) {
 }
 
 
-header('Location: ../index?page=adminInbox');
+header('Location: ../index.php?page=adminInbox');
 exit;
 ?>
