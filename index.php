@@ -28,7 +28,7 @@ if(isset($_SESSION['role'])){
     if($_SESSION['role'] == 'Klant'){
         include 'inc/navbar-klant.inc.php';
     }
-    else if ($_SESSION['role'] == 'Admin'){
+    else if ($_SESSION['role'] == 'admin'){
         include 'inc/navbar-admin.inc.php';
     }
 }

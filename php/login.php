@@ -19,7 +19,7 @@ if ($result && password_verify($password, $result['password'])) {
 
     if ($result['role'] == 'Klant') {
         header('Location: ../index.php?page=costumerdashboard');
-    } else if ($result['role'] == 'Admin') {
+    } else if ($result['role'] == 'admin') {
         header('Location: ../index.php?page=admindashboard');
     }
     exit();

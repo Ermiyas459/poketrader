@@ -44,7 +44,7 @@ $statement = $pdo->prepare($sql);
 $statement->bindParam(':name', $name);
 $statement->bindParam(':email', $email);
 $statement->bindParam(':password', $hashedPassword);
-$statement->bindParam(':birthdate', $birth_date);
+$statement->bindParam(':birth_date', $birth_date);
 $statement->bindParam(':role', $role);
 $statement->execute();
 
