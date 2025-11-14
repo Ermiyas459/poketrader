@@ -1,7 +1,15 @@
-<title>Dashboard | Poketrader</title>
-
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Poketrader</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="customerdashboard">
 
 <?php
+session_start();
+
 if (!isset($_SESSION['role']) || $_SESSION ['role'] == "Admin") {
     unset($_SESSION["role"]);
     header("Location: index.php?page=404");
@@ -9,28 +17,35 @@ if (!isset($_SESSION['role']) || $_SESSION ['role'] == "Admin") {
 }
 
 include '../Private/connectionpoke.php';
-
-$id = $_SESSION['userId'];
+$userId = $_SESSION['userId'];
 
 // kaarten
-$sql = "SELECT * FROM `pokecards`";
+$sql = "SELECT card_id FROM collection WHERE user_id = :uid";
 $stmt = $pdo->prepare($sql);
-$stmt->execute();
-$pokecards = $stmt->fetchAll();
-// pokedollars
-$id = $_SESSION['userId'] ?? 0; // fallback to 0 if not set
+$stmt->execute(['uid' => $userId]);
+$rows = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
+if (!empty($rows)) {
+    $in  = str_repeat('?,', count($rows) - 1) . '?';
+    $sql = "SELECT * FROM pokecards WHERE id IN ($in)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($rows);
+    $pokecards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else {
+    $pokecards = [];
+}
+
+// pokedollars
 $sql = "SELECT SUM(pokedollars) AS pokedollars 
         FROM wallet 
         WHERE userId = :userId";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['userId' => $userId]);
 $wallet = $stmt->fetch();
-
 ?>
 
 <section id="wallet" class="wallet">
-    <div class="wallet-container">
+    <div  class="wallet-container">
         <div class="wallet-info">
             <p class="pokedollars">
                 <img src="images/pokedollar.png" class="currency-logo" alt="$">
@@ -40,18 +55,32 @@ $wallet = $stmt->fetch();
     </div>
 </section>
 
-
 <section id="pokecards" class="pokecards">
     <div class="container">
         <?php if (!empty($pokecards)): ?>
             <div class="pokecards-grid" id="pokecardsGrid">
-                <?php foreach ($pokecards as $index => $ticket): ?>
-                    <div class="pokecards-content" style="display: <?= $index < 6 ? 'block' : 'none' ?>;">
-                        <img class="pokecards-img" src="data:image/jpeg;base64,<?= base64_encode($ticket['img']) ?>" alt="<?= htmlspecialchars($ticket['name']) ?>">
+                <?php foreach ($pokecards as $index => $card): ?>
+                    <div class="pokecards-content" <?= $index >= 6 ? 'style="display:none;"' : '' ?>>
+                        <?php if (!empty($card['img'])): ?>
+                            <img class="pokecards-img"
+                                 src="<?= htmlspecialchars($card['img']) ?>"
+                                 alt="<?= htmlspecialchars($card['name']) ?>">
+                        <?php else: ?>
+                            <div class="pokecards-img no-img">
+                                No image
+                            </div>
+                        <?php endif; ?>
+
                         <div class="pokecards-info">
-                            <p class="pokecard-name"><?= htmlspecialchars($ticket['name']) ?></p>
-                            <p class="pokecard-price">€<?= htmlspecialchars($ticket['price']) ?></p>
-                            <p class="pokecard-desc"><?= htmlspecialchars($ticket['description']) ?></p>
+                            <p class="pokecard-name">
+                                <?= htmlspecialchars($card['name']) ?>
+                            </p>
+                            <p class="pokecard-price">
+                                €<?= htmlspecialchars($card['price']) ?>
+                            </p>
+                            <p class="pokecard-desc">
+                                <?= htmlspecialchars($card['description']) ?>
+                            </p>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -59,18 +88,17 @@ $wallet = $stmt->fetch();
 
             <?php if (count($pokecards) > 6): ?>
                 <div class="load-more-wrapper">
-                    <button id="loadMoreBtn">Load more</button>
+                    <button id="loadMoreBtn" class="btn-load-more">Load more</button>
                 </div>
-
             <?php endif; ?>
+
         <?php else: ?>
-            <p>No pokecards found.</p>
+            <p>No pokecards found in your collection.</p>
         <?php endif; ?>
     </div>
 </section>
 
-<button class="bidsbtn" id="bidsbtn">Bids</button>
-
+<a class="register-link" href="index.php?page=auction">Bids</a>
 
 <script>
     let visibleCount = 6;
@@ -90,3 +118,6 @@ $wallet = $stmt->fetch();
         });
     }
 </script>
+
+</body>
+</html>

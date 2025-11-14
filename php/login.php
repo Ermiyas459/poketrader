@@ -14,8 +14,11 @@ $result = $statement->fetch(PDO::FETCH_ASSOC);
 
 
 if ($result && password_verify($password, $result['password'])) {
-    $_SESSION['userId'] = $result['userId'];
+    $_SESSION['userId'] = $result['id'];
     $_SESSION['role']   = $result['role'];
+    $_SESSION['name']   = $result['name'];
+
+
 
     if ($result['role'] == 'Klant') {
         header('Location: ../index.php?page=customerdashboard');

@@ -3,7 +3,7 @@
 
       <div id="pokemonBackground">
           <div id="pokemonOverlay">
-              Loading Pokémon...
+              Loading ur personal Pokémon...
           </div>
 
       </div>
@@ -17,6 +17,10 @@
           </p>
           <p>
               With<strong> PokéDollars</strong>, you can buy, sell, or earn special boosters. Become a true PokéMaster today and build your ultimate deck!
+
+          </p>
+          <p>
+              <a href="index.php?page=login" style='font-family:"Press Start 2P", monospace;'>LOGIN NOW</a>
           </p>
       </div>
 

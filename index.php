@@ -16,8 +16,12 @@ else{
     <link rel="icon" href="./images/pokeballblue.png">
 </head>
 <body>
-<?php include 'inc/navbar.inc.php'; ?>
+
+<?php if ($page != "pokedollarpage" && $page != "auction" && $page != "Auctionadmin" && $page != "inbox" && $page != "admininbox")
+    { include 'inc/navbar.inc.php';} ?>
+
 <?php include 'inc/' . $page . ".inc.php"; ?>
+
 </body>
 </html>
 

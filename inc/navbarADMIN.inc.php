@@ -10,7 +10,7 @@
 
     <a class="" href="index.php?page=homepage2">Home</a>
     <a class="" href="index.php?page=admindashboard">Dashboard</a>
-    <a class="" href="index.php?page=#">                   Auction</a>
+    <a class="" href="index.php?page=Auctionadmin">Auction</a>
     <a class="" href="index.php?page=admininbox">Inbox</a>
     <a href="php/logout.php" class="split">
         <img src="images/Block_Person.png" alt="Login">
