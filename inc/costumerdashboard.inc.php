@@ -32,7 +32,6 @@ $pokecards = $stmtCards->fetchAll();
         </div>
     </div>
 </section>
-<a href="index?page=buyPokemons" class="bidding-btn">Koop Pokémon</a>
 
 <section id="pokemons" class="pokemons">
     <div class="container">

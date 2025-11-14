@@ -1,14 +1,13 @@
 <title>Dashboard | ADMIN</title>
 
 <?php
-include '../Private/poketrader_db.connection.php';
 if (!isset($_SESSION['role']) || $_SESSION ['role'] == "Klant") {
     unset($_SESSION["role"]);
     header("Location: index.php?page=404");
     exit;
 }
 
-
+include '../Private/poketrader_db.connection.php';
 
 
 

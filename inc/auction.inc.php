@@ -1,6 +1,6 @@
 <?php
 include '../Private/poketrader_db.connection.php';
-
+include 'php/auctionPage.php';
 // Get logged-in user ID (if any)
 $userId = $_SESSION['userId'] ?? 0;
 
