@@ -24,6 +24,8 @@ include '../Private/poketrader_db.connection.php';
 
     <a class="active" href="index.php?page=costumerdashboard">dashboard</a>
     <a class="active-inbox"  href="index.php?page=inbox">inbox</a>
+      <a class="" href="index.php?page=pokedollarpage">Poke$</a>
+    <a class="active-inbox"  href="index.php?page=auction">Veilingen</a>
 
         <a href="PHP/logout.php">Uitloggen</a>
 

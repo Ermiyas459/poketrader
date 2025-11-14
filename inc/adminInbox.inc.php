@@ -20,9 +20,18 @@ $inbox = $stmt->fetchAll();
                         <input type="hidden" name="amount" value="<?= htmlspecialchars($message['amount']) ?>">
                         <input type="hidden" name="name" value="<?= htmlspecialchars($message['name']) ?>">
                         <input type="hidden" name="status" value="<?= htmlspecialchars($message['status']) ?>">
-                        <button type="submit" name="acceptBTN">Accepteren</button>
+                        <button type="submit" class="acceptBTN" name="acceptBTN">Accepteren</button>
+                        <br>
+                    </form>
+
+                    <form method="post" action="php/refuseAdmin.php">
+                        <input type="hidden" name="id" value="<?= htmlspecialchars($message['id']) ?>">
+                        <input type="hidden" name="status" value="<?= htmlspecialchars($message['status']) ?>">
+                        <button type="submit" class="refuseBTN" name="refuseBTN">Weigeren</button>
+
                     </form>
                 </div>
+
             <?php endforeach; ?>
         <?php else: ?>
             <p>Je hebt geen meldingen!</p>

@@ -8,7 +8,10 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $confirmpassword = $_POST['confirmpassword'];
 $birth_date = $_POST['birth_date'];
-$role = 'Klant';
+
+$getRoleId = $pdo->prepare("SELECT roleId FROM roles WHERE roleName = 'Klant'");
+$getRoleId->execute();
+$roleId = $getRoleId->fetchColumn();
 
 
 if ($password !== $confirmpassword) {
@@ -39,13 +42,13 @@ if ($checkStmt->fetchColumn() > 0) {
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-$sql = 'INSERT INTO users (userId, name, email, password, birth_date, role) VALUES (NULL, :name, :email, :password, :birth_date, :role)';
+$sql = 'INSERT INTO users (userId, name, email, password, birth_date, roleId) VALUES (NULL, :name, :email, :password, :birth_date, :roleId)';
 $statement = $pdo->prepare($sql);
 $statement->bindParam(':name', $name);
 $statement->bindParam(':email', $email);
 $statement->bindParam(':password', $hashedPassword);
 $statement->bindParam(':birth_date', $birth_date);
-$statement->bindParam(':role', $role);
+$statement->bindParam(':roleId', $roleId);
 $statement->execute();
 
 header('Location: ../index.php?page=login');

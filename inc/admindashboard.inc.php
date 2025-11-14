@@ -1,5 +1,13 @@
+<title>Dashboard | ADMIN</title>
+
 <?php
 include '../Private/poketrader_db.connection.php';
+if (!isset($_SESSION['role']) || $_SESSION ['role'] == "Klant") {
+    unset($_SESSION["role"]);
+    header("Location: index.php?page=404");
+    exit;
+}
+
 
 
 
@@ -66,19 +74,19 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             <button type="submit">Filter</button>
         </form>
-        <button class="btn add">+ Add User</button>
+        <button  class="btn add"><a href="index.php?page=registration">+ Add User</a></button>
     </div>
 
 
     <div class="user-table">
         <?php if (empty($users)): ?>
-            <p>Geen gebruikers gevonden.</p>
+            <p>No users found.</p>
         <?php else: ?>
             <?php foreach ($users as $user): ?>
                 <div class="user-row">
                     <div class="user-info">
                         <div class="user-pic">
-                            <img src="Images/default.png" alt="User Pic">
+                            <img src="images/default.png" alt="User Pic">
                         </div>
                         <div>
                             <span class="user-name"><?php echo htmlspecialchars($user['name']); ?></span><br>
@@ -89,11 +97,11 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <?php echo htmlspecialchars($user['role']); ?>
                     </div>
                     <div class="user-actions">
-                        <a href="PHP/delete.php?userId=<?php echo $user['userId']; ?>"
-                           onclick="return confirm('Weet je zeker dat je deze gebruiker wilt verwijderen?');">
+                        <a href="php/deleteuser.php?id=<?php echo $user['id']; ?>"
+                           onclick="return confirm('Are you sure you want to delete this user?');">
                             Delete
                         </a>
-                        <a href="PHP/edituser.php?userId=<?php echo $user['userId']; ?>">Edit</a>
+                        <a href="index.php?page=edituser&id<?php echo $user['id']; ?>">Edit</a>
                     </div>
                 </div>
             <?php endforeach; ?>

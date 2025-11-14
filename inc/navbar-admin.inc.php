@@ -11,7 +11,7 @@
 
 
     <a class="active" href="index.php?page=admindashboard">Home</a>
-    <a class="active-bids" href="index.php?page=auction">auction</a>
+    <a class="active-bids" href="index.php?page=Auctionadmin">auction</a>
     <a class="active-inbox" href="index.php?page=admininbox">inbox</a>
     <a href="PHP/logout.php">Uitloggen</a>
 </div>

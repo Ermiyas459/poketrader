@@ -433,11 +433,7 @@ body::after {
     image-rendering: pixelated;
 
 }
-/* Alleen achtergrond op de registratiepagina */
-body.registration-page {
-    background: url("../images/vulpix.jpg") no-repeat center center fixed;
-    background-size: cover; /* vult altijd het scherm */
-}
+
 
 .register-group {
     margin-bottom: 45px;
@@ -680,8 +676,8 @@ body.registration-page {
     margin-right: 5px;
 }
 
-/* De knop (rechts) */
-.messages button {
+
+.acceptBTN {
     background-color: #2ecc71;
     color: white;
     border: none;
@@ -704,4 +700,800 @@ body.registration-page {
     justify-content: space-between;
 }
 
+.refuseBTN1{
+    background-color: #cd1313;
+    color: white;
+    border: none;
+    height: 50px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
 
+}
+.refuseBTN{
+    background-color: #cd1313;
+    color: white;
+    border: none;
+    height: 60px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+/* veiling */
+.auction-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.auction-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2d2d2d;
+}
+
+.auction-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.auction-card:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.auction-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.auction-info {
+    flex-grow: 1;
+}
+
+.bid-form {
+    margin-top: 10px;
+}
+
+.bid-form input {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.bid-form button {
+    padding: 6px 10px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.bid-form button:hover {
+    background: #45a049;
+}
+
+.no-auctions {
+    text-align: center;
+    color: #777;
+    font-size: 1.1em;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+/*nadirs stylesheet*/
+
+/* ---------- DASHBOARD CONTAINER ---------- */
+.admin-dashboard {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #333;
+}
+
+.admin-dashboard h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+}
+
+/* ---------- CONTROLS (SEARCH + FILTER) ---------- */
+.user-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.user-controls input,
+.user-controls select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+.user-controls .btn.add {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.user-controls .btn.add:hover {
+    background: #218838;
+}
+
+/* ---------- USER TABLE ---------- */
+.user-table {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user-row {
+    display: grid;
+    grid-template-columns: 1fr 100px 160px;
+    align-items: center;
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-row:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ---------- USER INFO ---------- */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-pic img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+}
+
+
+/* ---------- STATS CARDS ---------- */
+.stats-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #007bff;
+}
+
+/* ----------  HOMEPAGE POKEMON API  ---------- */
+#pokemonBackground{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+#pokemonOverlay{
+    background: rgba(0,0,0,0.3);
+    color: #3C5AA6;
+    padding: 15px 25px;
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+.pokemon-card {
+    width: 300px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+    border: 6px solid #3C5AA6;
+    position: relative;
+}
+.pokemon-card .header {
+    background: #3C5AA6;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+.card-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 20px;
+}
+.pokemon-card {
+    flex: 0 0 250px;
+    scroll-snap-align: center;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 12px;
+    text-align: center;
+}
+
+.pokemon-card img {
+    width: 100%;
+    height: auto;
+}
+
+.type-badge {
+    display: inline-block;
+    margin: 2px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.currency-logo {
+    width: 90px;
+    margin: 0;
+    filter: drop-shadow(0 0 2px #FFD54F);
+    animation: bounce 2s infinite;
+}
+
+body.addcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    margin-top: 80px;
+    width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.poke-card {
+    border: 3px solid #3b4cca;
+    border-radius: 12px;
+    padding: 15px;
+    background: linear-gradient(145deg, #f7f7f7, #e2e2e2);
+    margin-bottom: 20px;
+}
+
+.poke-card img {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #FFCB05;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-top: 10px;
+}
+form input,
+form select {
+    width: 75%;
+    padding: 9px;
+    border: 1px solid #3b4cca;
+    border-radius: 6px;
+    margin-top: 3px;
+}
+
+.add-pokemon-btn {
+    background-color: #FFCB05;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 15px auto 0 auto;
+}
+
+.add-pokemon-btn:hover {
+    background-color: #2563eb; /* donkerder blauw bij hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.add-pokemon-btn:active {
+    background-color: #1d4ed8;
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+:root {
+    --bg1: #043569;
+    --bg2: #1368ce;
+    --accent: #ffd23f;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-hover: rgba(255, 255, 255, 0.25);
+    --shadow: 0 12px 30px rgba(0,0,0,0.35);
+    --text: #fff;
+    --toast-bg: #111a2b;
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+body.pokedollarpage  {
+    margin: 0;
+    background: linear-gradient(145deg, var(--bg1), var(--bg2));
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    color: var(--text);
+    min-height: 100vh;
+}
+
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* BALANCE */
+.balance {
+    position: relative;          /* nodig voor absolute positioning van .ghost */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 1rem 1.25rem 2.5rem; /* extra bottom space voor de knop */
+    margin-left: auto;
+    min-width: 260px;
+    min-height: 120px;           /* zodat er ruimte is linksonder */
+}
+
+.ghost {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    padding: .5rem .9rem;
+    border: 2px solid rgba(255,255,255,.7);
+    border-radius: 999px;
+    color: #fff;
+    background: transparent;
+    transition: .2s ease;
+}
+
+/* MAIN */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+.card:hover {
+    cursor: pointer;
+    transform: translateY(-8px) scale(1.02);
+    background: var(--card-hover);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.4));
+    margin-top: 0.5rem;
+}
+.card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+}
+.card .coins {
+    font-weight: 700;
+    color: var(--accent);
+}
+.card .price {
+    background: var(--accent);
+    color: #222;
+    font-weight: 800;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 0.8rem;
+}
+.card button {
+    margin-top: 1rem;
+    background: linear-gradient(90deg, #ffcb05, #ff8a00);
+    color: #222;
+    border: none;
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.card button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ffe259, #ffa751);
+}
+
+/* BONUS RIBBON */
+.ribbon {
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    background: #ff5b7a;
+    color: #fff;
+    padding: 0.3rem 2rem;
+    font-weight: 700;
+    transform: rotate(-45deg);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+/* Wallet Section */
+.wallet {
+    margin-top: 100px; /* pushes below header bar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.wallet-container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 180px;
+}
+
+.wallet-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pokedollars {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    display: flex;gap: 0.5rem;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start; /* of center, als je het wil centreren */
+    line-height: 0.4;
+}
+
+.currency-logo {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+
+/* Header */
+.header-auction {
+    width: 100%;
+    background: #ffcb05;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    border-bottom: 4px solid #2a75bb;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Hoofdcontainer */
+.auction-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.auction-card {
+    background: #ffffff;
+    border: 3px solid #000;
+    padding: 25px;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-image {
+    width: 180px;
+    height: 230px;
+    border: 3px solid #000;
+    background: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    flex: 1;
+}
+
+.card-info h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.card-info ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+.card-info li {
+    margin: 6px 0;
+}
+
+.card-info li span {
+    font-weight: bold;
+}
+
+.right-panel {
+    width: 260px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.highest-bid {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.bid-history {
+    margin-top: 10px;
+    font-size: 14px;
+    max-height: 150px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+}
+
+/* Biedsectie */
+.bid-section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+input[type="number"] {
+    height: 40px;
+    width: 220px;
+    border: 3px solid #000;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+button {
+    height: 44px;
+    width: 150px;
+    border: 3px solid #000;
+    background: #ffcb05;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffd94c;
+}
+
+.message {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.back-link {
+    margin: 10px auto 0;
+    width: 90%;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.back-link a {
+    color: #2a75bb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 10px 0 20px 0;
+}
+
+/* Wallet */
+.wallet {
+    padding-top: 2rem;
+}
+
+.pokecards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Card */
+.pokecards-content {
+    background: #020617;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.8);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.pokecards-content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.9);
+    border-color: #38bdf8;
+}
+
+/* Afbeelding van de kaart */
+.pokecards-img {
+    width: 100%;
+    height: 240px;        /* hier bepaal je hoe "hoog" de kaartafbeelding mag zijn */
+    object-fit: contain;  /* hele kaart zichtbaar, niet uitgesneden */
+    background: #020617;
+    display: block;
+}
+
+
+/* Card tekst */
+.pokecards-info {
+    padding: 0.85rem 1rem 1.05rem;
+}
+
+.pokecard-name {
+    margin: 0 0 0.3rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #e5e7eb;
+}
+
+.pokecard-price {
+    margin: 0 0 0.3rem;
+    font-weight: 600;
+    color: #22c55e;
+    font-size: 0.98rem;
+}
+
+/* Bids link */
+.register-link {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    background: #facc15;
+    color: #1f2937;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.35);
+}
