@@ -47,3 +47,4 @@ if (isset($_POST['name'], $_POST['price'], $_POST['type'], $_POST['img'])) {
           window.location.href='buyPokemons.php';</script>";
 }
 ?>
+

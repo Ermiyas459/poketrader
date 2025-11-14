@@ -35,3 +35,4 @@ $inbox = $stmt->fetchAll();
         <?php endif; ?>
     </div>
 </section>
+

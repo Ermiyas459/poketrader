@@ -54,3 +54,4 @@ $statement->execute();
 header('Location: ../index.php?page=login');
 $_SESSION['meldinglogin'] = "Account aangemaakt! U kunt nu inloggen.";
 ?>
+

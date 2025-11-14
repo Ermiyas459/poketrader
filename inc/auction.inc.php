@@ -5,8 +5,8 @@ include 'php/auctionPage.php';
 $userId = $_SESSION['userId'] ?? 0;
 
 $userName = "Currently not logged in";
-$pokedollars = 0;
 
+$pokedollars = 0;
 // If user is logged in, get their name and balance
 if ($userId > 0) {
     // Get user name
@@ -366,4 +366,5 @@ $globalMessage = $_GET['msg'] ?? '';
 </script>
 
 </body>
+
 

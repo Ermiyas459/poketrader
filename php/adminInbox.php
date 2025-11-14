@@ -39,3 +39,4 @@ if ($stmt->execute()) {
 header('Location: ../index.php?page=adminInbox');
 exit;
 ?>
+

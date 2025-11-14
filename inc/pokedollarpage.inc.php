@@ -63,6 +63,7 @@ if ($userId > 0) {
             <div class="price">€25.00</div>
         </div>
 
+
         <div class="card" onclick="buy(50,800, 'Squirtle Pack')">
             <div class="ribbon">+25%</div>
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">

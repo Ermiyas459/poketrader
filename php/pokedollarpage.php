@@ -47,3 +47,4 @@ try {
     header('Location: ../index.php?page=pokedollarpage&error=db');
     exit;
 }
+

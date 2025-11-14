@@ -81,3 +81,4 @@ $pokecards = $stmtCards->fetchAll();
         });
     }
 </script>
+

@@ -87,3 +87,4 @@ try {
     $pdo->rollBack();
     header('Location: ../index.php?page=auction&msg=Error+placing+bid');
 }
+

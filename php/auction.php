@@ -83,3 +83,4 @@ $stmtFinish->execute([
 header("Location: ../index.php?page=auction&auctionId=" . $auctionId);
 exit;
 ?>
+

@@ -6,3 +6,4 @@ session_unset();
 header('location: ../index.php?page=login');
 exit();
 ?>
+

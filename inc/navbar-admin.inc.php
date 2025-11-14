@@ -15,3 +15,4 @@
     <a class="active-inbox" href="index.php?page=admininbox">inbox</a>
     <a href="PHP/logout.php">Uitloggen</a>
 </div>
+

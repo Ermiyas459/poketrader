@@ -15,6 +15,7 @@
         unset($_SESSION["meldingpsw"]);
     }
     ?>
+
     <h4> Registration</h4>
     <form action="./php/register.php" method="post">
         <div class="register-group">
