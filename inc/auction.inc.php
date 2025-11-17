@@ -60,6 +60,7 @@ $globalMessage = $_GET['msg'] ?? '';
     </p>
 <?php endif; ?>
 
+
 <div class="auction-wrapper">
 
     <?php if (empty($cards)): ?>
