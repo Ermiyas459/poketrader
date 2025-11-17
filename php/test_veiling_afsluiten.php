@@ -112,3 +112,4 @@ echo "<h2>Check Database:</h2>";
 echo "<a href='../index.php?page=klantinbox'>Bekijk Inbox</a> | ";
 echo "<a href='test_veiling_afsluiten.php'>Refresh</a>";
 ?>
+

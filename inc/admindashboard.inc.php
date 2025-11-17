@@ -96,11 +96,11 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <?php echo htmlspecialchars($user['role']); ?>
                     </div>
                     <div class="user-actions">
-                        <a href="php/deleteuser.php?id=<?php echo $user['id']; ?>"
+                        <a href="php/deleteuser.php?id=<?php echo $user['userId']; ?>"
                            onclick="return confirm('Are you sure you want to delete this user?');">
                             Delete
                         </a>
-                        <a href="index.php?page=edituser&id<?php echo $user['id']; ?>">Edit</a>
+                        <a href="index.php?page=edituser&id<?php echo $user['userId']; ?>">Edit</a>
                     </div>
                 </div>
             <?php endforeach; ?>

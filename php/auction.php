@@ -7,7 +7,6 @@ if (!isset($_GET['auctionId'])) {
 
 $auctionId = intval($_GET['auctionId']);
 
-// 1. haal auction + hoogste bod op
 $stmt = $pdo->prepare("
     SELECT a.*, b.userId AS highestUser, b.amount AS highestAmount
     FROM auctions a

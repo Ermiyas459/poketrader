@@ -71,7 +71,7 @@ $globalMessage = $_GET['msg'] ?? '';
             $startPrice = (float)$card['price'];
 
             // Veiling duurt 10 min = 600 sec
-            $totalSeconds = 600;
+            $totalSeconds = 120;
 
             $createdAt = new DateTime($card['created_at']);
             $now       = new DateTime();
@@ -102,72 +102,73 @@ $globalMessage = $_GET['msg'] ?? '';
                 $highestBidderName = $highestRow['name'];
             }
 
-            $winnerUserId = $card['winner_userId'] ?? null;
+//            $winnerUserId = $card['winner_userId'] ?? null;
 
             // 👉 ALS VEILING KLAAR IS: winner bepalen + kaart NIET tonen
+//            if (!$auctionActive) {
+//                if (empty($winnerUserId) && $highestRow) {
+//                    try {
+//                        $pdo->beginTransaction();
+//
+//                        $winnerUserId = (int)$highestRow['userId'];
+//
+//                        // 1. Winner opslaan bij de kaart
+//                        $stmtSetWinner = $pdo->prepare(
+//                            'UPDATE pokecards
+//                     SET winner_userId = :winner
+//                     WHERE id = :card_id'
+//                        );
+//                        $stmtSetWinner->execute([
+//                            ':winner'  => $winnerUserId,
+//                            ':card_id' => $card['id'],
+//                        ]);
+//
+//                        // 2. Kaart in collectie van de winnaar plaatsen
+//                        $stmtCollection = $pdo->prepare(
+//                            'INSERT INTO collection (userId, card_id)
+//                     VALUES (:userId, :card_id)'
+//                        );
+//                        $stmtCollection->execute([
+//                            ':userId' => $winnerUserId,
+//                            ':card_id' => $card['id'],
+//                        ]);
+//
+//// 3. Bericht in de inbox van de winnaar
+//                        $meldingTekst = "Congratulations! You have won: "
+//                            . $card['name'] . " for €" . number_format($highestBid, 2, ',', '.');
+//
+//                        $stmtInbox = $pdo->prepare(
+//                            'INSERT INTO klantinbox
+//        (melding, PokecardId, price, userId, status, PokecardImg, PokecardName)
+//     VALUES
+//        (:melding, :PokecardId, :price, :userId, :status, :PokecardImg, :PokecardName)'
+//                        );
+//
+//                        $stmtInbox->execute([
+//                            ':melding'      => $meldingTekst,
+//                            ':PokecardId'   => $card['id'],
+//                            ':price'        => $highestBid,
+//                            ':userId'       => $winnerUserId,        // of weg laten als je die kolom niet hebt
+//                            ':status'       => 'open',
+//                            ':PokecardImg'  => $card['img'],
+//                            ':PokecardName' => $card['name'],
+//                        ]);
+//
+//
+//
+//                        $pdo->commit();
+//                    } catch (Exception $e) {
+//                        if ($pdo->inTransaction()) {
+//                            $pdo->rollBack();
+//                        }
+//                        // eventueel loggen
+//                    }
+//                }
+
             if (!$auctionActive) {
-                if (empty($winnerUserId) && $highestRow) {
-                    try {
-                        $pdo->beginTransaction();
-
-                        $winnerUserId = (int)$highestRow['userId'];
-
-                        // 1. Winner opslaan bij de kaart
-                        $stmtSetWinner = $pdo->prepare(
-                            'UPDATE pokecards 
-                     SET winner_userId = :winner 
-                     WHERE id = :card_id'
-                        );
-                        $stmtSetWinner->execute([
-                            ':winner'  => $winnerUserId,
-                            ':card_id' => $card['id'],
-                        ]);
-
-                        // 2. Kaart in collectie van de winnaar plaatsen
-                        $stmtCollection = $pdo->prepare(
-                            'INSERT INTO collection (userId, card_id)
-                     VALUES (:userId, :card_id)'
-                        );
-                        $stmtCollection->execute([
-                            ':userId' => $winnerUserId,
-                            ':card_id' => $card['id'],
-                        ]);
-
-// 3. Bericht in de inbox van de winnaar
-                        $meldingTekst = "Congratulations! You have won: "
-                            . $card['name'] . " for €" . number_format($highestBid, 2, ',', '.');
-
-                        $stmtInbox = $pdo->prepare(
-                            'INSERT INTO klantinbox 
-        (melding, PokecardId, price, userId, status, PokecardImg, PokecardName)
-     VALUES 
-        (:melding, :PokecardId, :price, :userId, :status, :PokecardImg, :PokecardName)'
-                        );
-
-                        $stmtInbox->execute([
-                            ':melding'      => $meldingTekst,
-                            ':PokecardId'   => $card['id'],
-                            ':price'        => $highestBid,
-                            ':userId'       => $winnerUserId,        // of weg laten als je die kolom niet hebt
-                            ':status'       => 'open',
-                            ':PokecardImg'  => $card['img'],
-                            ':PokecardName' => $card['name'],
-                        ]);
-
-
-
-                        $pdo->commit();
-                    } catch (Exception $e) {
-                        if ($pdo->inTransaction()) {
-                            $pdo->rollBack();
-                        }
-                        // eventueel loggen
-                    }
-                }
-
-                // ❌ deze kaart niet meer tonen op de auction-pagina
                 continue;
             }
+//            }
 
             // Vanaf hier: alleen nog ACTIEVE veilingen
             // Laatste 5 bids

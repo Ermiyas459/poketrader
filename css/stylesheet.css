@@ -815,3 +815,217 @@ body.registration-page {
     border: 1px solid #f5c6cb;
 }
 /*nadirs stylesheet*/
+/* === Pokémon Edit User Styling (Scoped to .edituser-container) === */
+
+/* Container */
+.edituser-container {
+    background: linear-gradient(180deg, #ffcb05 0%, #3b4cca 100%);
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 175vh;
+    padding-top: 160px; /* verhoogd zodat Pokéball niet overlapt met titel */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-align: center;
+    position: relative;
+}
+
+/* Titel met glitter */
+.edituser-title {
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ff0000;
+    text-shadow: 2px 2px #3b4cca;
+    font-size: 28px;
+    margin-bottom: 100px; /* meer ruimte onder de titel */
+    animation: glitter 2.5s infinite linear;
+    position: relative;
+    z-index: 2; /* boven de Pokéball */
+}
+
+/* Glitter effect */
+@keyframes glitter {
+    0%, 100% { text-shadow: 2px 2px #3b4cca, 0 0 10px #fff; }
+    25% { text-shadow: 2px 2px #3b4cca, 0 0 10px #ffcb05; }
+    50% { text-shadow: 2px 2px #3b4cca, 0 0 15px #ff0000; }
+    75% { text-shadow: 2px 2px #3b4cca, 0 0 10px #fff; }
+}
+
+/* Formulier */
+.edituser-form {
+    background-color: rgba(255, 255, 255, 0.95); /* iets transparanter wit */
+    border: 4px solid #2a75bb;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    padding: 80px 50px 60px;
+    width: 380px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.8s ease-in-out;
+    overflow: visible;
+    z-index: 1;
+}
+
+/* Pokéball boven het formulier */
+.edituser-form::before {
+    content: '';
+    position: absolute;
+    top: -100px; /* verder omhoog zodat hij niet over de tekst valt */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at center, #ffffff 45%, #ff0000 45%);
+    border: 5px solid #2a75bb;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #fff, 0 0 35px #ffcb05;
+    animation: pokeballBounce 2.5s infinite ease-in-out;
+    z-index: 0; /* onder de titel */
+}
+
+/* Pokéball bounce effect */
+@keyframes pokeballBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* Form groepen */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    color: #2a75bb;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* Inputvelden */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #2a75bb;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #ffcb05;
+    box-shadow: 0 0 15px #ffcb05;
+    transform: scale(1.03);
+}
+
+/* Opslaan knop */
+.edituser-btn {
+    background-color: #ffcb05;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 14px;
+    color: #2a75bb;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glanzende glitter op hover */
+.edituser-btn:hover {
+    background-color: #2a75bb;
+    color: #fff;
+    transform: scale(1.07);
+    box-shadow: 0 0 15px #ffcb05, 0 0 30px #ffcb05;
+}
+
+/* Glanzende overlay (glitter sweep effect) */
+.edituser-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+    transform: skewX(-20deg);
+    transition: 0.7s;
+}
+
+.edituser-btn:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #3b4cca 100%);
+}
+
+/* Annuleer link */
+.edituser-cancel {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #3b4cca;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.edituser-cancel:hover {
+    color: #ff0000;
+    transform: scale(1.05);
+}
+
+/* Succesbericht */
+.edituser-success {
+    background-color: #c8e6c9;
+    color: #256029;
+    border: 1px solid #256029;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(37,96,41,0.3);
+}
+
+/* Foutmeldingen */
+.edituser-errors {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.edituser-errors li {
+    background-color: #ffebee;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    border-radius: 6px;
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 12px;
+    animation: shake 0.5s;
+}
+
+/* Shake effect bij fout */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Fade in animatie */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
