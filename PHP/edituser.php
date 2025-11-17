@@ -1,14 +1,21 @@
 <?php
 session_start();
-include "../../Private/pokeconnection.php"; // Verbind met de database
+include "../../Private/pokeconnection.php";
 
-// Reset meldingen
 $_SESSION['errors'] = [];
 $_SESSION['success'] = "";
 
-// Alleen uitvoeren als het formulier is verstuurd
+// Controleer eerst of er een POST is
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = $_POST['id'];
+
+    // Controleer of userid bestaat in POST
+    if (!isset($_POST['userId'])) {
+        $_SESSION['errors'][] = "Geen gebruikers-ID ontvangen.";
+        header("Location: ../index.php?page=admindashboard");
+        exit;
+    }
+
+    $id = $_POST['userId'];
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
     $password = $_POST['password'];
@@ -17,29 +24,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $errors = [];
 
-    // Validatie
-    if (empty($name)) {
-        $errors[] = "Naam is verplicht.";
-    }
-    if (empty($email)) {
-        $errors[] = "Email is verplicht.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "Ongeldig e-mailadres.";
-    }
-    if (empty($role)) {
-        $errors[] = "Rol is verplicht.";
-    }
+    if (empty($name)) $errors[] = "Naam is verplicht.";
+    if (empty($email)) $errors[] = "Email is verplicht.";
+    elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Ongeldig e-mailadres.";
+    if (empty($role)) $errors[] = "Rol is verplicht.";
 
-    // Controleer of email uniek is (behalve bij huidige gebruiker)
-    $sql_check_email = "SELECT id FROM users WHERE email = :email AND id != :id";
+    // Controleer of e-mail uniek is
+    $sql_check_email = "SELECT userId FROM users WHERE email = :email  AND userId != :userId";
     $stmt_check_email = $pdo->prepare($sql_check_email);
-    $stmt_check_email->execute([':email' => $email, ':id' => $id]);
-
+    $stmt_check_email->execute([':email' => $email, ':userId' => $id]);
     if ($stmt_check_email->rowCount() > 0) {
         $errors[] = "Dit e-mailadres wordt al gebruikt.";
     }
 
-    // Als er geen errors zijn → updaten
     if (empty($errors)) {
         $sql = "UPDATE users 
                 SET name = :name, email = :email, birth_date = :birth_date, role = :role";
@@ -48,21 +45,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sql .= ", password = :password";
         }
 
-        $sql .= " WHERE id = :id";
+        $sql .= " WHERE userId = :userId";
 
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':userId', $id, PDO::PARAM_INT);
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':birth_date', $birth_date);
         $stmt->bindParam(':role', $role);
 
         if (!empty($password)) {
-            $stmt->bindParam(':password', $password);
+            $hashed = password_hash($password, PASSWORD_DEFAULT);
+            $stmt->bindParam(':password', $hashed);
         }
 
         if ($stmt->execute()) {
-            $_SESSION['success'] = "Gebruiker succesvol bijgewerkt!";
+
             header("Location: ../index.php?page=admindashboard");
             exit;
         } else {
@@ -71,8 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $_SESSION['errors'] = $errors;
-    header("Location: ../index.php?page=edituser&id=$id");
+    header("Location: ../index.php?page=edituser&userId=$id");
     exit;
 }
 ?>
-

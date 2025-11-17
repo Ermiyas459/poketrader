@@ -1,14 +1,22 @@
 <?php
 include "../../Private/pokeconnection.php";
 
-$userid = $_GET['id'];
+$userId = $_GET['userId'] ?? null;
 
-$sql = 'DELETE FROM users WHERE id = :id';
+if (!$userId) {
+    die("Geen userId opgegeven.");
+}
+
+$sql = 'DELETE FROM users WHERE userId = :userId';
 $stmt = $pdo->prepare($sql);
-$stmt->bindParam(':id', $userid, PDO::PARAM_INT);
-$stmt->execute();
+$stmt->bindParam(':userId', $userId, PDO::PARAM_INT);
 
-header("Location: ../index.php?page=admindashboard");
-exit;
+if ($stmt->execute()) {
+    header("Location: ../index.php?page=admindashboard");
+    exit;
+} else {
+    die("Verwijderen mislukt.");
+}
 ?>
+
 
